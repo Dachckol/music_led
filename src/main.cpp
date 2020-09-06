@@ -38,7 +38,7 @@ void process_buffer() {
   fft->Compute(buffer, buffer_img, FRAME_SIZE, FFT_FORWARD);
   fft->ComplexToMagnitude(buffer, buffer_img, FRAME_SIZE);
 
-  led_calculator->calculate(buffer, FRAME_SIZE/2);
+  led_calculator->calculate(buffer, FRAME_SIZE/2); // FFT output is half the size of input
 
   analogWrite(A1, led_calculator->get_red());
   analogWrite(A2, led_calculator->get_green());
@@ -48,10 +48,10 @@ void process_buffer() {
 
 void setup() {
   Serial.begin(9600);
-  pinMode(A0, INPUT);
-  pinMode(A1, OUTPUT);
-  pinMode(A2, OUTPUT);
-  pinMode(A3, OUTPUT);
+  pinMode(A0, INPUT); // audio input 0-1000
+  pinMode(A1, OUTPUT); // red out
+  pinMode(A2, OUTPUT); // green out
+  pinMode(A3, OUTPUT); // blue out
   current_index = 0;
 
   // RAM will be flashed on reset so no need to tear these down
