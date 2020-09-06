@@ -15,6 +15,7 @@ public:
 private:
   uint8_t ticks;
   uint8_t target_ticks;
+  uint8_t last_ticks;
 
   timer_callback_t callback;
 

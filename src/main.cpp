@@ -8,8 +8,6 @@
 
 #define SAMPLE_RATE 16000 // Arduino is 16 MHz giving 1000 cycles per sample
 #define FRAME_SIZE 128 // must be a power of 2 for FFT algorithm
-#define BINS 3
-
 
 
 double buffer[FRAME_SIZE];

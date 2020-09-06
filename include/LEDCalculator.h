@@ -6,7 +6,7 @@
 class LEDCalculator {
 public:
 
-  explicit LEDCalculator(int sample_rate);
+  explicit LEDCalculator(uint16_t sample_rate);
 
   void calculate(double* buffer, uint8_t size);
   uint8_t get_red();
@@ -22,7 +22,7 @@ private:
   uint8_t green;
   uint8_t blue;
 
-  const int sample_rate;
+  const uint16_t sample_rate;
 
   const float min_signal;
 
