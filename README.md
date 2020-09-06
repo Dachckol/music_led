@@ -28,8 +28,8 @@ Install platformio
 
 Frequencies are divided into 3 bins based on frequency(`f`):
 
-f < 450Hz  - Bass (blue)
-450 <= f < 2000 - Midrange (green)
-2000 <= f - Upper range (red)
+* f < 450Hz  - Bass (blue)
+* 450 <= f < 2000 - Midrange (green)
+* 2000 <= f - Upper range (red)
 
 Based loosely on [this](https://www.teachmeaudio.com/mixing/techniques/audio-spectrum)
